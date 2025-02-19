@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:       Copy Button
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Copy Button Block
+ * Description:       Adds a block that allows you to copy the content inside by clicking the button
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
- * Author:            The WordPress Contributors
+ * Author:            Josh Kennedy
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       copy-button
