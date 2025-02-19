@@ -11,6 +11,8 @@ export async function copyGroupContent(el) {
 			".copy-button-group__content",
 		)?.textContent;
 
+	text = text.trim();
+
 	await navigator.clipboard.writeText(text).catch((err) => {
 		console.error(err);
 	});
