@@ -1,6 +1,7 @@
 :where(.wp-block-copy-button-copy-button-group-content:has(.wp-block-copy-button-copy-button-group-content),
 	[data-type="copy-button/copy-button-group-content"]) {
-	/* border: 1px solid #e0e0e0; */
+	min-width: 100%;
+	width: 100%;
 	border-radius: 4px;
 	position:relative;
 
