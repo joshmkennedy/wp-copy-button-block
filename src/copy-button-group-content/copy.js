@@ -16,10 +16,11 @@ export async function copyGroupContent(el) {
 		// if we are in the editor
 		text = el
 			.closest(
-				// and this as well...
-				".wp-block-copy-button-copy-button-group-content > .block-editor-inner-blocks > .block-editor-block-list__layout",
+				".wp-block-copy-button-copy-button-group-content",
 			)
-			?.querySelector(".copy-button-group__content")?.innerHTML;
+			?.querySelector(
+				".copy-button-group__content .block-editor-block-list__layout"
+			)?.innerHTML;
 			// innerHTML so we can keep the formatting. I realize textContent is safer
 	}
 
