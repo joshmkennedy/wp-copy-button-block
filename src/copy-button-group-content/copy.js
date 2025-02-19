@@ -5,7 +5,6 @@
  */
 export async function copyGroupContent(el) {
 	const text = el.closest(".wp-block-copy-button-copy-button-group-content")?.querySelector(".copy-button-group__content")?.textContent;
-	console.log(text);
 	await navigator.clipboard.writeText(text).catch((err) => {
 		console.error(err);
 	});

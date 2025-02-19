@@ -9,7 +9,6 @@ store("copy-button", {
 			context.copying = true;
 			const { ref } = getElement();
 			await copyGroupContent(ref);
-			console.log("copied");
 			context.copying = false;
 		},
 	},
