@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Copy Button Block
  * Description:       Adds a block that allows you to copy the content inside by clicking the button
- * Version:           0.1.7
+ * Version:           0.1.8
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Josh Kennedy

@@ -8,21 +8,8 @@ export async function copyGroupContent(el) {
 		.closest(".wp-block-copy-button-copy-button-group-content")
 		?.querySelector(
 			// i realize this is gross
-			".copy-button-group__content > .wp-block-copy-button-copy-button-group-content",
-		)?.innerHTML;
-		// innerHTML so we can keep the formatting. I realize textContent is safer
-
-	if (!text) {
-		// if we are in the editor
-		text = el
-			.closest(
-				".wp-block-copy-button-copy-button-group-content",
-			)
-			?.querySelector(
-				".copy-button-group__content .block-editor-block-list__layout"
-			)?.innerHTML;
-			// innerHTML so we can keep the formatting. I realize textContent is safer
-	}
+			".copy-button-group__content",
+		)?.textContent;
 
 	await navigator.clipboard.writeText(text).catch((err) => {
 		console.error(err);
