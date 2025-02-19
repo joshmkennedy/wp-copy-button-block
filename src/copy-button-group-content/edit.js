@@ -1,5 +1,5 @@
 import { __ } from "@wordpress/i18n";
-import { useState, useRef, useCallback } from "@wordpress/element";
+import { useState, useCallback } from "@wordpress/element";
 import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 import "./editor.scss";
 import "./view.scss";
@@ -16,21 +16,20 @@ const TEMPLATE = [
 ];
 
 export default function Edit() {
-	const wrapperRef = useRef();
 	const [isCopying, setIsCopying] = useState(false);
 	const copy = useCallback(
 		async function copy(e) {
 			e.preventDefault();
 			setIsCopying(true);
-			await copyGroupContent(wrapperRef.current);
+			await copyGroupContent(e.target);
 			setIsCopying(false);
 		},
-		[wrapperRef, setIsCopying],
+		[setIsCopying],
 	);
 
 	return (
 		<div
-			{...useBlockProps({ref:wrapperRef})}
+			{...useBlockProps()}
 			className="wp-block-copy-button-copy-button-group-content"
 		>
 			<div class="copy-button-group__header">
