@@ -30,7 +30,7 @@ export default function Edit() {
 
 	return (
 		<div
-			{...useBlockProps(/*{ref:wrapperRef}*/)}
+			{...useBlockProps({ref:wrapperRef})}
 			className="wp-block-copy-button-copy-button-group-content"
 		>
 			<div class="copy-button-group__header">
@@ -41,7 +41,7 @@ export default function Edit() {
 
 			<div class="copy-button-group__content">
 				<InnerBlocks
-					allowedBlocks={["core/paragraph", "core/heading"]}
+					allowedBlocks={["core/paragraph", "core/heading", "core/preformatted"]}
 					template={TEMPLATE}
 				/>
 			</div>
