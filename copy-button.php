@@ -24,8 +24,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_copy_button_block_init() {
+function create_block_copy_button_block_init(): void {
 	register_block_type( __DIR__ . '/build/copy-button-group-content' );
+	register_block_type( __DIR__ . '/build/term-description' );
 }
 
 add_action( 'init', 'create_block_copy_button_block_init' );

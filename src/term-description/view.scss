@@ -1,0 +1,103 @@
+:where(.wp-block-copy-button-copy-button-group-content:has(.wp-block-copy-button-copy-button-group-content),
+	[data-type="copy-button/copy-button-group-content"]) {
+	min-width: 100%;
+	width: 100%;
+	border-radius: 4px;
+	position:relative;
+
+	.copy-button-group__header {
+		padding: 0;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 1rem;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+	}
+
+	.copy-button-group__header-item{
+		display:flex;
+	}
+
+	.copy-button-group__button {
+		z-index: 1;
+		position: relative;
+		background-color: hsl(215 25% 60% / 5%);
+		padding: 0.5rem;
+		border-radius: 4px;
+		font-size: 14px;
+		aspect-ratio: 1 / 1;
+		width: auto;
+		display: inline-flex;
+		border: 1px solid transparent;
+		line-height: 1;
+		color: hsl(215 25% 60% / 1);
+		overflow: hidden;
+
+		svg {
+			width: 1em;
+			height: auto;
+			fill: currentColor;
+			transition:
+				transform 0.2s ease-in-out,
+				opacity 0.1s linear;
+			position: relative;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: var(--cpy-btn--button-hover--bg,
+					hsl(215 25% 60% / 15%));
+			color: var(--cpy-btn--button-hover--color, #2ed3a3);
+		}
+	}
+
+	.copy-button-group__icon--check {
+		@starting-style {
+			transform: translateY(100%);
+			opacity: 0;
+		}
+	}
+
+	.copy-button-group__icon--clipboard {
+		@starting-style {
+			transform: translateY(-100%);
+			opacity: 0;
+		}
+	}
+
+	.copy-button-group__status {
+		z-index: 0;
+		padding:.25rem;
+		font-size: 14px;
+		border-radius: 4px;
+		color: hsl(215 25% 60% / 1);
+		position: relative;
+		transition:
+			transform 0.2s ease-in-out,
+			opacity 0.2s linear;
+
+		overflow: hidden;
+
+		@starting-style {
+			opacity: 0;
+		}
+
+		& div {
+			position:relative;
+			transition: transform .2s ease-in-out;
+
+			@starting-style {
+				transform: translateX(100%);
+			}
+		}
+	}
+
+	.copy-button-group__content {
+		padding: 1.5rem;
+	}
+}
+

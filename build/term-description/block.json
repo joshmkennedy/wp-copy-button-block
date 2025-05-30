@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "copy-button/term-description",
+  "version": "0.1.8",
+  "title": "Term Description",
+  "category": "widgets",
+  "icon": "tag",
+  "description": "Displays the configured term's description",
+  "example": {},
+  "supports": {
+    "html": false,
+    "interactivity": true
+  },
+  "textdomain": "copy-button",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./view.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php",
+  "attributes": {
+    "tax": {
+      "type": "string"
+    },
+    "term": {
+      "type": "string"
+    }
+  }
+}
